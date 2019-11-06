@@ -1,0 +1,7 @@
+stmt1
+if condition
+    stmt2
+    stmt3
+else
+    stmt4
+stmt5

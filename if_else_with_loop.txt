@@ -1,0 +1,10 @@
+stmt1
+stmt2
+if condition:
+    stmt3
+    while condition:
+        stmt4
+    stmt5
+else:
+    stmt6
+stmt7
