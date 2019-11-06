@@ -1,5 +1,8 @@
 import re
 import listToMat_Graph
+import networkx as nx
+import matplotlib.pyplot as plt
+G=nx.Graph()
 breakStatements = re.compile('if|while|for|else|elif')
 f = open('MinMaxMatrix.py', mode='r')
 contents = f.readlines()
@@ -28,6 +31,12 @@ while i < len(contents):
 if len(graph) == 0:
     graph[1] = []
 print (nodes)
+for i in nodes:
+    G.add_node(i)
+for i in graph:
+    G.add_edges_from(graph[i])
+nx.draw(G)
+plt.show()
 print (graph)
 print (listToMat_Graph.LtM(graph, nodes))
 if len(graph) == 1:
